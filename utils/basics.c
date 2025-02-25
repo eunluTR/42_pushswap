@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   basics.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:33:09 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/23 14:33:09 by marvin           ###   ########.fr       */
+/*   Updated: 2025/02/25 19:44:33 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,16 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
+}
+
+void print_list(t_list *lst)
+{
+	t_list	*current;
+
+	current = lst;
+	while (current)
+	{
+		putnbr(current->content);
+		current = current->next;
+	}
 }

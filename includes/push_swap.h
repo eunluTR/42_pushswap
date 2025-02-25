@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/25 19:34:00 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/25 19:44:16 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,8 @@ t_list *ft_lstlast(t_list *lst);
 void ft_lstadd_front(t_list **lst, t_list *new);
 void ft_lstadd_back(t_list **lst, t_list *new);
 int ft_lstsize(t_list *lst);
+void print_list(t_list *lst);
+void putnbr(int n);
+
 
 #endif

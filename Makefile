@@ -13,6 +13,7 @@ SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(UTILS_DIR)/free.c \
 			  $(UTILS_DIR)/linked_list.c \
 			  $(UTILS_DIR)/split.c \
+			  $(UTILS_DIR)/putnbr.c \
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
