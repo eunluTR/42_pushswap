@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 17:27:45 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 21:38:08 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ void sort_stack(t_list **stack_a, t_list **stack_b);
 void allocate_stacks(t_list **stack_a, t_list **stack_b);
 int is_sorted(t_list *stack);
 void free_stacks(t_list **stack_a, t_list **stack_b);
+char	*ft_strdup(const char *s1);
+int 	ft_strlen(const char *str);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*join_args(char **argv);
+int get_min_pos(t_list *stack);
+int	get_max_bits(t_list *stack);
+void rotate_to_top(t_list **stack, int pos, int size);
 
 int swap(t_list **stack);
 void sa(t_list **stack_a);

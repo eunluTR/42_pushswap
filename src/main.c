@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:49:51 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 17:55:41 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 21:15:09 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ int main(int argc, char **argv)
 	*stack_b = NULL;
 	init_stack(stack_a, argv);
 	if (is_sorted(*stack_a))
-	 	return (0);
+	   	return (0);
 	sort_stack(stack_a, stack_b);
-	free_stacks(stack_a, stack_b);
-	
+	// free_stacks(stack_a, stack_b);
 	return (0);
 }
 

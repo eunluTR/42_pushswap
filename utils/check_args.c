@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:29:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/23 14:29:05 by marvin           ###   ########.fr       */
+/*   Updated: 2025/02/26 20:58:46 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,26 +52,48 @@ static int	is_int(char *num)
 	return (1);
 }
 
+char	*join_args(char **argv)
+{
+	char	*joined;
+	char	*temp;
+	char	*temp2;
+	int		i;
+
+	i = 1;
+	joined = ft_strdup(""); 
+	while (argv[i])
+	{
+		temp = ft_strjoin(joined, " ");  
+		free(joined);
+		temp2 = ft_strjoin(temp, argv[i]);
+		free(temp);
+		joined = temp2;
+		i++;
+	}
+	return (joined);
+}
+
 void	check_args(int argc, char **argv)
 {
+	char	*all_args;
+	char	**tokens;
 	int		i;
-	char	**arg_list;
 
-	if (argc == 1)
+	if (argc < 2)
 		exit(0);
-	if (argc != 2)
-		error_exit();
-	arg_list = ft_split(argv[1], ' ');
+	all_args = join_args(argv);
+	tokens = ft_split(all_args, ' ');
+	free(all_args);
 	i = 0;
-	while (arg_list[i])
+	while (tokens[i])
 	{
-		if (!is_num(arg_list[i]))
+		if (!is_num(tokens[i]))
 			error_exit();
-		if (!is_int(arg_list[i]))
+		if (!is_int(tokens[i]))
 			error_exit();
-		if (is_in_list(ft_atoi(arg_list[i]), arg_list, i))
+		if (is_in_list(ft_atoi(tokens[i]), tokens, i))
 			error_exit();
 		i++;
 	}
-	free_list(arg_list);
+	free_list(tokens);
 }

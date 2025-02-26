@@ -22,6 +22,7 @@ SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(UTILS_DIR)/push.c \
 			  $(UTILS_DIR)/rotate.c \
 			  $(UTILS_DIR)/reverse_rotate.c \
+			  $(UTILS_DIR)/sort_utils.c \
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
@@ -49,6 +50,12 @@ test2:				$(NAME)
 
 test3:				$(NAME)	
 					$(eval ARG = $(shell shuf -i 0-100 -n 3))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
+
+test4:				$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 4))
 					./push_swap $(ARG) | ./checker_linux $(ARG)
 					@echo -n "Instructions: "
 					@./push_swap $(ARG) | wc -l

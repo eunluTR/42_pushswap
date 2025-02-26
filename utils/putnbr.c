@@ -6,13 +6,13 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 19:42:07 by emir              #+#    #+#             */
-/*   Updated: 2025/02/25 19:43:28 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 19:25:35 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int ft_strlen(char *str)
+int ft_strlen(const char *str)
 {
 	int i;
 

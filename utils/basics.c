@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:33:09 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 13:27:08 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 19:23:50 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,47 @@ void print_list(t_list *lst)
 		putnbr(current->content);
 		current = current->next;
 	}
+}
+
+char	*ft_strdup(const char *s1)
+{
+	int		len;
+	char	*p1;
+	int		i;
+
+	len = ft_strlen(s1);
+	p1 = malloc(len + 1);
+	if (!p1)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		p1[i] = s1[i];
+		++i;
+	}
+	p1[len] = '\0';
+	return (p1);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		len_s1;
+	int		len_s2;
+	int		i;
+	char	*p;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	p = malloc(len_s1 + len_s2 + 1);
+	if (!p)
+		return (NULL);
+	i = 0;
+	while (*s1)
+		p[i++] = *s1++;
+	while (*s2)
+		p[i++] = *s2++;
+	p[i] = '\0';
+	return (p);
 }

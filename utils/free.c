@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:46:59 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/25 19:33:13 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 21:05:24 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	free_stack(t_list **stack)
 		head = head->next;
 		free(tmp);
 	}
-	free(stack);
+	*stack = NULL; 
 }
