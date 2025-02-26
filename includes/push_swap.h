@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 17:14:27 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 17:27:45 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,8 @@ int reverse_rotate(t_list **stack);
 void rra(t_list **stack_a);
 void rrb(t_list **stack_b);
 void rrr(t_list **stack_a, t_list **stack_b);
+
+void basic_sort(t_list **stack_a, t_list **stack_b);
+void radix_sort(t_list **stack_a, t_list **stack_b);
 
 #endif

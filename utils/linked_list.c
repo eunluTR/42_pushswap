@@ -6,13 +6,13 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:56:58 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/25 19:35:19 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 17:29:32 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*new;
 

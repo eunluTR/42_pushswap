@@ -21,9 +21,7 @@ SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(UTILS_DIR)/swap.c \
 			  $(UTILS_DIR)/push.c \
 			  $(UTILS_DIR)/rotate.c \
-			  $(UTILS_DIR)/reverse_rotate.c
-			  $(UTILS_DIR)/push.c \
-			  $(UTILS_DIR)/swap.c
+			  $(UTILS_DIR)/reverse_rotate.c \
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
