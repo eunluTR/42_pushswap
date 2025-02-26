@@ -7,10 +7,14 @@ SRC_DIR		= src
 UTILS_DIR	= utils
 
 SRC_FILES	= $(SRC_DIR)/main.c \
+			  $(SRC_DIR)/init.c \
+			  $(SRC_DIR)/basic_sort.c \
+			  $(SRC_DIR)/radix_sort.c \
 			  $(UTILS_DIR)/basics.c \
 			  $(UTILS_DIR)/check_args.c \
 			  $(UTILS_DIR)/error.c \
 			  $(UTILS_DIR)/free.c \
+			  $(UTILS_DIR)/index.c \
 			  $(UTILS_DIR)/linked_list.c \
 			  $(UTILS_DIR)/split.c \
 			  $(UTILS_DIR)/putnbr.c \
