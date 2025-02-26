@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 13:49:40 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/26 17:14:27 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,24 @@ void sort_stack(t_list **stack_a, t_list **stack_b);
 void allocate_stacks(t_list **stack_a, t_list **stack_b);
 int is_sorted(t_list *stack);
 void free_stacks(t_list **stack_a, t_list **stack_b);
+
+int swap(t_list **stack);
+void sa(t_list **stack_a);
+void sb(t_list **stack_b);
+void ss(t_list **stack_a, t_list **stack_b);
+
+int push(t_list **src, t_list **dst);
+void pa(t_list **stack_a, t_list **stack_b);
+void pb(t_list **stack_a, t_list **stack_b);
+
+int rotate(t_list **stack);
+void ra(t_list **stack_a);
+void rb(t_list **stack_b);
+void rr(t_list **stack_a, t_list **stack_b);
+
+int reverse_rotate(t_list **stack);
+void rra(t_list **stack_a);
+void rrb(t_list **stack_b);
+void rrr(t_list **stack_a, t_list **stack_b);
 
 #endif

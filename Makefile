@@ -18,6 +18,12 @@ SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(UTILS_DIR)/linked_list.c \
 			  $(UTILS_DIR)/split.c \
 			  $(UTILS_DIR)/putnbr.c \
+			  $(UTILS_DIR)/swap.c \
+			  $(UTILS_DIR)/push.c \
+			  $(UTILS_DIR)/rotate.c \
+			  $(UTILS_DIR)/reverse_rotate.c
+			  $(UTILS_DIR)/push.c \
+			  $(UTILS_DIR)/swap.c
 
 OBJ_FILES	= $(SRC_FILES:.c=.o)
 
