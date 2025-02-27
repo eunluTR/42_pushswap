@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 21:38:08 by emir             ###   ########.fr       */
+/*   Updated: 2025/02/27 11:39:47 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+// Structure for the stack
 typedef struct s_list
 {
 	int				content;
@@ -51,25 +52,30 @@ int get_min_pos(t_list *stack);
 int	get_max_bits(t_list *stack);
 void rotate_to_top(t_list **stack, int pos, int size);
 
+// Swap functions
 int swap(t_list **stack);
 void sa(t_list **stack_a);
 void sb(t_list **stack_b);
 void ss(t_list **stack_a, t_list **stack_b);
 
+// Push functions
 int push(t_list **src, t_list **dst);
 void pa(t_list **stack_a, t_list **stack_b);
 void pb(t_list **stack_a, t_list **stack_b);
 
+// Rotate functions
 int rotate(t_list **stack);
 void ra(t_list **stack_a);
 void rb(t_list **stack_b);
 void rr(t_list **stack_a, t_list **stack_b);
 
+// Reverse rotate functions
 int reverse_rotate(t_list **stack);
 void rra(t_list **stack_a);
 void rrb(t_list **stack_b);
 void rrr(t_list **stack_a, t_list **stack_b);
 
+// Sorting functions
 void basic_sort(t_list **stack_a, t_list **stack_b);
 void radix_sort(t_list **stack_a, t_list **stack_b);
 
