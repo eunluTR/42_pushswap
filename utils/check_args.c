@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:29:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 20:58:46 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/05 13:59:44 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,11 @@ void	check_args(int argc, char **argv)
 	while (tokens[i])
 	{
 		if (!is_num(tokens[i]))
-			error_exit();
+			error_exit(tokens);
 		if (!is_int(tokens[i]))
-			error_exit();
+			error_exit(tokens);
 		if (is_in_list(ft_atoi(tokens[i]), tokens, i))
-			error_exit();
+			error_exit(tokens);
 		i++;
 	}
 	free_list(tokens);

@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:17:14 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 21:32:15 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/05 13:18:40 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 		j = 0;
 		while (j < size)
 		{
-			if (((*stack_a)->content >> i) & 1)
+			if (((*stack_a)->index >> i) & 1)
 				ra(stack_a);
 			else
 				pb(stack_a, stack_b);
 			j++;
 		}
 		while (*stack_b)
-			pa(stack_a, stack_b);    // *stack_b*'deki her şeyi geri al
+			pa(stack_a, stack_b);
 		i++;
 	}
 }

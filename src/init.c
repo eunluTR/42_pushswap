@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:16:24 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 21:03:48 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/05 13:48:58 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,6 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 		basic_sort(stack_a, stack_b);
 	else
 		radix_sort(stack_a, stack_b);
-}
-
-void	allocate_stacks(t_list **stack_a, t_list **stack_b)
-{
-	stack_a = (t_list **)malloc(sizeof(t_list));
-		if (!stack_a)
-			error_exit();
-	stack_b = (t_list **)malloc(sizeof(t_list));
-		if (!stack_b)
-			error_exit();
-	*stack_a = NULL;
-	*stack_b = NULL;
 }
 
 int		is_sorted(t_list *stack)

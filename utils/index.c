@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:21:29 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 13:39:48 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/05 12:45:36 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,13 @@ static t_list	*get_min(t_list **stack)
     return (min);
 }
 
-void	index_stack(t_list **stack)
+void index_stack(t_list **stack)
 {
     t_list *min;
-    int     i;
-
-    i = 0;
-    while (1)
+    int i = 0;
+    while ((min = get_min(stack)) != NULL)
     {
-        min = get_min(stack);
-        if (!min)
-            break;
         min->index = i;
-        ++i;
+        i++;
     }
 }
