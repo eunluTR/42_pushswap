@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:16:24 by emir              #+#    #+#             */
-/*   Updated: 2025/03/05 13:48:58 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/08 07:39:03 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,12 @@ void	init_stack(t_list **stack, char **argv)
 
 void	sort_stack(t_list **stack_a, t_list **stack_b)
 {
-	if (ft_lstsize(*stack_a) <= 5)
-		basic_sort(stack_a, stack_b);
+	int n = ft_lstsize(*stack_a);
+	int pop_est = estimate_pop_min_sort(n);
+	int rad_est = estimate_radix_sort(n);
+
+	if (pop_est <= rad_est)
+		pop_min_sort(stack_a, stack_b);
 	else
 		radix_sort(stack_a, stack_b);
 }

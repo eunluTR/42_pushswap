@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:31:09 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 21:37:57 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/08 07:48:26 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,26 +38,18 @@ int get_min_pos(t_list *stack)
 
 int	get_max_bits(t_list *stack)
 {
-	int	max_bits = 0;
+	int max_index = 0;
+	int bits = 0;
 
 	while (stack)
 	{
-		int	val = stack->content;
-		int	bits = 0;
-
-		if (val < 0)
-			val = -val;
-
-		while (val != 0)
-		{
-			val >>= 1;
-			bits++;
-		}
-		if (bits > max_bits)
-			max_bits = bits;
+		if (stack->index > max_index)
+			max_index = stack->index;
 		stack = stack->next;
 	}
-	return (max_bits);
+	while ((max_index >> bits) != 0)
+		bits++;
+	return (bits);
 }
 
 void rotate_to_top(t_list **stack, int pos, int size)
@@ -78,4 +70,28 @@ void rotate_to_top(t_list **stack, int pos, int size)
             pos++;
         }
     }
+}
+
+static int	int_log2(int n)
+{
+	int bits = 0;
+	while (n > 1)
+	{
+		n >>= 1;
+		bits++;
+	}
+	return (bits);
+}
+
+int	estimate_radix_sort(int n)
+{
+	int bits = int_log2(n);
+	return (2 * n * bits);
+}
+
+int	estimate_pop_min_sort(int n)
+{
+	if (n <= 3)
+		return (n);
+	return (n + 1) * (n - 3) + 4 + (n - 3);
 }

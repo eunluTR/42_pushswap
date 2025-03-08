@@ -10,6 +10,7 @@ SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(SRC_DIR)/init.c \
 			  $(SRC_DIR)/basic_sort.c \
 			  $(SRC_DIR)/radix_sort.c \
+			  $(SRC_DIR)/pop_sort.c \
 			  $(UTILS_DIR)/basics.c \
 			  $(UTILS_DIR)/check_args.c \
 			  $(UTILS_DIR)/error.c \
@@ -70,7 +71,7 @@ test100:			$(NAME)
 					$(eval ARG = $(shell for i in $$(shuf -i 0-10000 -n 100); do echo $$(($$i - 5000)); done))
 					./push_swap $(ARG) | ./checker_linux $(ARG)
 					@echo -n "Instructions: "
-					@./push_swap $(ARG) | wc -l
+					@./push_swap $(ARG) | wc -l	
 
 test500:			$(NAME)	
 					$(eval ARG = $(shell for i in $$(shuf -i 0-10000 -n 500); do echo $$(($$i - 5000)); done))

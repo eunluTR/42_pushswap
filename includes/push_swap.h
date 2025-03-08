@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/05 13:59:35 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/08 07:26:31 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*join_args(char **argv);
 int get_min_pos(t_list *stack);
 int	get_max_bits(t_list *stack);
 void rotate_to_top(t_list **stack, int pos, int size);
+void pop_min_sort(t_list **stack_a, t_list **stack_b);
 
 // Swap functions
 int swap(t_list **stack);
@@ -76,5 +77,8 @@ void rrr(t_list **stack_a, t_list **stack_b);
 // Sorting functions
 void basic_sort(t_list **stack_a, t_list **stack_b);
 void radix_sort(t_list **stack_a, t_list **stack_b);
+
+int estimate_radix_sort(int n);
+int estimate_pop_min_sort(int n);
 
 #endif
