@@ -8,7 +8,6 @@ UTILS_DIR	= utils
 
 SRC_FILES	= $(SRC_DIR)/main.c \
 			  $(SRC_DIR)/init.c \
-			  $(SRC_DIR)/basic_sort.c \
 			  $(SRC_DIR)/radix_sort.c \
 			  $(SRC_DIR)/pop_sort.c \
 			  $(UTILS_DIR)/basics.c \

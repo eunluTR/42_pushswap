@@ -22,7 +22,6 @@ void	init_stack(t_list **stack, char **argv)
 	all_args = join_args(argv);
 	arg_list = ft_split(all_args, ' ');
 	free(all_args);
-
 	i = 0;
 	while (arg_list[i])
 	{
@@ -37,17 +36,20 @@ void	init_stack(t_list **stack, char **argv)
 
 void	sort_stack(t_list **stack_a, t_list **stack_b)
 {
-	int n = ft_lstsize(*stack_a);
-	int pop_est = estimate_pop_min_sort(n);
-	int rad_est = estimate_radix_sort(n);
+	int	n;
+	int	pop_est;
+	int	rad_est;
 
+	n = ft_lstsize(*stack_a);
+	pop_est = estimate_pop_min_sort(n);
+	rad_est = estimate_radix_sort(n);
 	if (pop_est <= rad_est)
 		pop_min_sort(stack_a, stack_b);
 	else
 		radix_sort(stack_a, stack_b);
 }
 
-int		is_sorted(t_list *stack)
+int	is_sorted(t_list *stack)
 {
 	t_list	*current;
 
