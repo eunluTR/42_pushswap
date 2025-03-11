@@ -6,15 +6,15 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:29:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/05 13:59:44 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/12 01:04:08 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int 	is_in_list(int num, char **argv, int i)
+static int	is_in_list(int num, char **argv, int i)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (j < i)
@@ -28,7 +28,7 @@ static int 	is_in_list(int num, char **argv, int i)
 
 static int	is_num(char *num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (num[i] == '-' || num[i] == '+')
@@ -60,10 +60,10 @@ char	*join_args(char **argv)
 	int		i;
 
 	i = 1;
-	joined = ft_strdup(""); 
+	joined = ft_strdup("");
 	while (argv[i])
 	{
-		temp = ft_strjoin(joined, " ");  
+		temp = ft_strjoin(joined, " ");
 		free(joined);
 		temp2 = ft_strjoin(temp, argv[i]);
 		free(temp);

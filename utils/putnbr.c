@@ -6,15 +6,15 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 19:42:07 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 19:25:35 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/12 01:05:39 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -22,14 +22,14 @@ int ft_strlen(const char *str)
 	return (i);
 }
 
-static void putstr(char *str)
+static void	putstr(char *str)
 {
 	write(1, str, ft_strlen(str));
 }
 
-void putnbr(int n)
+void	putnbr(int n)
 {
-	char c;
+	char	c;
 
 	if (n == -2147483648)
 	{
@@ -46,4 +46,3 @@ void putnbr(int n)
 	c = n % 10 + '0';
 	write(1, &c, 1);
 }
-

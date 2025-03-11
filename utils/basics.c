@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:33:09 by marvin            #+#    #+#             */
-/*   Updated: 2025/02/26 19:23:50 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/12 00:56:34 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-void print_list(t_list *lst)
+void	print_list(t_list *lst)
 {
 	t_list	*current;
 

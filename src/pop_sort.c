@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pop_sort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:13:59 by eunlu             #+#    #+#             */
-/*   Updated: 2025/03/11 17:26:36 by eunlu            ###   ########.fr       */
+/*   Updated: 2025/03/12 01:13:48 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	find_min_position(t_list *stack)
 	int		min_pos;
 	int		i;
 
-	*current = stack;
+	current = stack;
 	min_val = current->content;
 	min_pos = 0;
 	i = 0;
@@ -70,11 +70,15 @@ static void	pop_min_to_b(t_list **stack_a, t_list **stack_b)
 
 static void	sort_3(t_list **stack)
 {
-	t_list *a = *stack;
-	int x = a->content;
-	int y = a->next->content;
-	int z = a->next->next->content;
+	t_list	*a;
+	int		x;
+	int		y;
+	int		z;
 
+	a = *stack;
+	x = a->content;
+	y = a->next->content;
+	z = a->next->next->content;
 	if (x > y && x < z)
 		sa(stack);
 	else if (x > y && y > z)
@@ -97,7 +101,6 @@ void	pop_min_sort(t_list **stack_a, t_list **stack_b)
 {
 	while (ft_lstsize(*stack_a) > 3)
 		pop_min_to_b(stack_a, stack_b);
-
 	if (ft_lstsize(*stack_a) == 3 && !is_sorted(*stack_a))
 		sort_3(stack_a);
 	else if (ft_lstsize(*stack_a) == 2)

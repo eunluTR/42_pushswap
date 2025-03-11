@@ -6,7 +6,7 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:11:54 by emir              #+#    #+#             */
-/*   Updated: 2025/02/26 17:13:01 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/12 01:12:03 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,19 @@ int	rotate(t_list **stack)
 	return (1);
 }
 
-void ra(t_list **stack_a)
+void	ra(t_list **stack_a)
 {
 	if (rotate(stack_a))
 		write(1, "ra\n", 3);
 }
 
-void rb(t_list **stack_b)
+void	rb(t_list **stack_b)
 {
 	if (rotate(stack_b))
 		write(1, "rb\n", 3);
 }
 
-void rr(t_list **stack_a, t_list **stack_b)
+void	rr(t_list **stack_a, t_list **stack_b)
 {
 	if (rotate(stack_a) && rotate(stack_b))
 		write(1, "rr\n", 3);

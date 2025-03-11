@@ -6,41 +6,19 @@
 /*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 21:31:09 by emir              #+#    #+#             */
-/*   Updated: 2025/03/08 07:48:26 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/12 01:11:11 by emir             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int get_min_pos(t_list *stack)
-{
-    int     min_val;
-    int     min_pos;
-    int     i;
-    t_list  *current;
-
-    min_val = stack->content;
-    min_pos = 0;
-    i = 0;
-    current = stack;
-    while (current)
-    {
-        if (current->content < min_val)
-        {
-            min_val = current->content;
-            min_pos = i;
-        }
-        current = current->next;
-        i++;
-    }
-    return (min_pos);
-}
-
 int	get_max_bits(t_list *stack)
 {
-	int max_index = 0;
-	int bits = 0;
+	int	max_index;
+	int	bits;
 
+	max_index = 0;
+	bits = 0;
 	while (stack)
 	{
 		if (stack->index > max_index)
@@ -52,29 +30,31 @@ int	get_max_bits(t_list *stack)
 	return (bits);
 }
 
-void rotate_to_top(t_list **stack, int pos, int size)
+void	rotate_to_top(t_list **stack, int pos, int size)
 {
-    if (pos <= size / 2)
-    {
-        while (pos > 0)
-        {
-            ra(stack);
-            pos--;
-        }
-    }
-    else
-    {
-        while (pos < size)
-        {
-            rra(stack);
-            pos++;
-        }
-    }
+	if (pos <= size / 2)
+	{
+		while (pos > 0)
+		{
+			ra(stack);
+			pos--;
+		}
+	}
+	else
+	{
+		while (pos < size)
+		{
+			rra(stack);
+			pos++;
+		}
+	}
 }
 
 static int	int_log2(int n)
 {
-	int bits = 0;
+	int	bits;
+
+	bits = 0;
 	while (n > 1)
 	{
 		n >>= 1;
@@ -85,7 +65,9 @@ static int	int_log2(int n)
 
 int	estimate_radix_sort(int n)
 {
-	int bits = int_log2(n);
+	int	bits;
+
+	bits = int_log2(n);
 	return (2 * n * bits);
 }
 
@@ -93,5 +75,5 @@ int	estimate_pop_min_sort(int n)
 {
 	if (n <= 3)
 		return (n);
-	return (n + 1) * (n - 3) + 4 + (n - 3);
+	return ((n + 1) * (n - 3) + 4 + (n - 3));
 }
