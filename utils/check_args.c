@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:29:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/12 01:04:08 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/19 12:26:24 by eunlu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	check_args(int argc, char **argv)
 	char	**tokens;
 	int		i;
 
-	if (argc < 2)
+	if (argc < 2 || !check_empty_input(argv[1]))
 		exit(0);
 	all_args = join_args(argv);
 	tokens = ft_split(all_args, ' ');

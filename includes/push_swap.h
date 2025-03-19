@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/08 07:26:31 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/19 12:28:43 by eunlu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*join_args(char **argv);
 int		get_min_pos(t_list *stack);
 int		get_max_bits(t_list *stack);
 void	rotate_to_top(t_list **stack, int pos, int size);
+int		check_empty_input(char *input);
 
 // Swap functions
 int		swap(t_list **stack);

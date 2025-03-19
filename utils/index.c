@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emir <emir@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:21:29 by emir              #+#    #+#             */
-/*   Updated: 2025/03/12 01:11:39 by emir             ###   ########.fr       */
+/*   Updated: 2025/03/19 12:29:07 by eunlu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,20 @@ int	get_min_pos(t_list *stack)
 		i++;
 	}
 	return (min_pos);
+}
+
+int	check_empty_input(char *input)
+{
+	int	i;
+
+	i = 0;
+	if (input == NULL || input[0] == '\0')
+		return (0);
+	while (input[i] == ' ')
+		i++;
+	if (input[i] == '\0')
+		return (0);
+	return (1);
 }
 
 void	index_stack(t_list **stack)
