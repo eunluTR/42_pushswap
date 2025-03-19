@@ -6,7 +6,7 @@
 /*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:27:37 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/19 12:28:43 by eunlu            ###   ########.fr       */
+/*   Updated: 2025/03/19 12:39:50 by eunlu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_list
 
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
+int		ft_atol(const char *str);
 void	check_args(int argc, char **argv);
 void	error_exit(char **tokens);
 void	free_list(char **str);

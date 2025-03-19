@@ -6,7 +6,7 @@
 /*   By: eunlu <eunlu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 14:29:05 by marvin            #+#    #+#             */
-/*   Updated: 2025/03/19 12:26:24 by eunlu            ###   ########.fr       */
+/*   Updated: 2025/03/19 12:42:36 by eunlu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	is_int(char *num)
 {
 	long	tmp;
 
-	tmp = ft_atoi(num);
+	tmp = ft_atol(num);
 	if (tmp > 2147483647 || tmp < -2147483648)
 		return (0);
 	return (1);
